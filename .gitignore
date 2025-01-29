@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+
+# Log files
+*.log
+
+# Dependências do sistema operacional
+.DS_Store
+
+# Arquivos de configuração do editor de código (VS Code, por exemplo)
+.vscode/
+
+# Arquivos de ambiente local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Pastas de uploads ou qualquer diretório gerado dinamicamente
+public/uploads/
