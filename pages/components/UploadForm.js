@@ -3,14 +3,12 @@ import { useState } from 'react';
 export default function UploadForm() {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false); // Para controle de loading
+  const [loading, setLoading] = useState(false);
 
-  // Atualiza o estado com o arquivo selecionado
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  // Envia o arquivo quando o formulário for enviado
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -20,17 +18,17 @@ export default function UploadForm() {
     }
 
     const formData = new FormData();
-    formData.append('file', file); // Adiciona o arquivo ao FormData
+    formData.append('file', file);
 
     try {
-      setLoading(true); // Inicia o carregamento
+      setLoading(true);
 
       const res = await fetch('/api/upload', {
         method: 'POST',
         body: formData,
       });
 
-      const data = await res.json(); // Obtém a resposta do servidor
+      const data = await res.json();
 
       if (res.ok) {
         setMessage('Currículo enviado com sucesso!');
@@ -41,7 +39,7 @@ export default function UploadForm() {
       setMessage('Erro ao enviar o currículo.');
       console.error(error);
     } finally {
-      setLoading(false); // Termina o carregamento
+      setLoading(false);
     }
   };
 
