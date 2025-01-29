@@ -8,9 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
+    "formidable": "^3.5.2",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "formidable": "^3.5.2"
+    "react-dom": "latest"
   }
 }
