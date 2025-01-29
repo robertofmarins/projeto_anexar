@@ -21,3 +21,4 @@ node_modules/
 
 # Pastas de uploads ou qualquer diretório gerado dinamicamente
 public/uploads/
+.vercel

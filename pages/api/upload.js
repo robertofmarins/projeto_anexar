@@ -1,4 +1,4 @@
-import formidable from 'formidable'; // Importando a versão mais recente do formidable
+import { IncomingForm } from 'formidable';
 import fs from 'fs';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -18,7 +18,7 @@ export default function handler(req, res) {
   console.log('Requisição recebida:', req.method); // Log da requisição recebida
 
   if (req.method === 'POST') {
-    const form = formidable(); // Correção: instanciando o formidable diretamente
+    const form = new IncomingForm(); // Corrigido aqui
     const uploadDir = path.join(process.cwd(), '/public/uploads');
 
     // Verifica se o diretório de uploads existe, caso contrário, cria
