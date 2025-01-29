@@ -1,0 +1,9 @@
+{
+    "builds": [
+      {
+        "src": "pages/api/upload.js",
+        "use": "@vercel/node"
+      }
+    ]
+  }
+  
